@@ -17,6 +17,7 @@ end
 
 def get_english_meaning(path, emoticon)
   library = load_library(path)
+  # (-.-) is the args
   if library[emoticon]
     return library[emoticon][:english]
   end
