@@ -8,12 +8,10 @@ def load_library(path)
   library.each_pair do |key, value|
     e[key] = {:english => value[0], :japanese => value[1]}
   end
-  pp e
   return e
 end
 
 def get_japanese_emoticon(path, emoticon)
-  # emoticon = :) need (.x.)
   library = load_library(path)
   library.each_pair do |key, value|
     if value[:english] == emoticon
