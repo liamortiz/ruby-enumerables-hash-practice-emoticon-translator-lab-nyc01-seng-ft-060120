@@ -3,13 +3,12 @@ require "yaml"
 
 def load_library(path)
   library = YAML.load_file(path)
-  e = {:english => {}, :japanese => {}}
+  e = {}
   
   library.each_pair do |key, value|
     e[:english][key.to_sym] = value[0]
     e[:japanese][key.to_sym] = value[1]
   end
-  pp e
   return e
 end
 
