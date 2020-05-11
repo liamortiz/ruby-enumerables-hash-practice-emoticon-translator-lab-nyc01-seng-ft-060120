@@ -18,7 +18,13 @@ end
 def get_english_meaning(path, emoticon)
   library = load_library(path)
   # (-.-) is the args
+  # Needs to return grinning(key)
   if library[emoticon]
     return library[emoticon][:english]
   end
+  
+  library.each_pair do |key, value|
+    if
+  end
+  
 end
