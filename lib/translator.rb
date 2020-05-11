@@ -6,16 +6,15 @@ def load_library(path)
   e = {}
   
   library.each_pair do |key, value|
-    e[:english][key.to_sym] = value[0]
-    e[:japanese][key.to_sym] = value[1]
+    e[key] = {:english => value[0], :japanese => value[1]}
   end
   return e
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path, emoticon)
   # code goes here
 end
 
-def get_english_meaning
+def get_english_meaning(path, emoticon)
   # code goes here
 end
