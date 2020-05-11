@@ -18,8 +18,6 @@ end
 
 def get_english_meaning(path, emoticon)
   library = load_library(path)
-  # (-.-) is the args
-  # Needs to return grinning(key)
   library.each_pair do |key, value|
     if value[:japanese] == emoticon
       return key
